@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" /> <button>insert</button>
+    <div class="list"></div>
+
+    <script>
+    var nick = 'EGOmaniack';
+    var button = document.getElementsByTagName("button")[0];
+    var input = document.getElementsByTagName('input')[0];
+    button.onclick = function(){
+        var request = new XMLHttpRequest();
+        request.open('POST', '/lessons/ToDo/insertToDo.php', true);
+        request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+        request.send('input=' + input.value + '&nick=' + nick + '&list=true');
+        request.onload = function(){
+            document.getElementsByClassName('list')[0].innerHTML = request.responseText;
+        }
+    };
+    function getList(callback){
+        var request = new XMLHttpRequest();
+        request.open('GET', '/lessons/ToDo/getToDo.php?nick=' + nick + '&list=true', true);
+
+        request.onload = function() {
+        if (request.status >= 200 && request.status < 400) {
+            // Success!
+            var resp = request.responseText;
+            callback(resp);
+        } else {
+            // We reached our target server, but it returned an error
+            return "error";
+        }
+        };
+
+        request.onerror = function() {
+            // There was a connection error of some sort
+            return "error";
+        };
+
+        request.send();
+    }
+    getList(function(response){document.getElementsByClassName('list')[0].innerHTML = response});
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+[
+    {
+        "NickName": "eseptus",
+        "name": "Алексей",
+        "todoList": [
+            {"lable": "Сделать заготовку под ToDo", "done": false},
+            {"lable": "Отрисовка из переменной", "done":false},
+            {"lable": "Реализовать добавление", "done":false},
+            {"lable": "Реализовать удаление","done":false},
+            {"lable": "Рефакторинг", "done":false},
+            {"lable": "Прикрутить бэк енд", "done": false},
+            {"lable": "Profit!", "done": false}
+        ]
+    },
+    {
+        "NickName": "RakotDD",
+        "name": "Максим",
+        "todoList": [
+            {"lable": "Сделать заготовку под ToDo", "done": false},
+            {"lable": "Отрисовка из переменной", "done":false},
+            {"lable": "Реализовать добавление", "done":false},
+            {"lable": "Реализовать удаление","done":false},
+            {"lable": "Рефакторинг", "done":false},
+            {"lable": "Прикрутить бэк енд", "done": false},
+            {"lable": "Profit!", "done": false}
+        ]
+    },
+    {
+        "NickName": "EGOmaniack",
+        "name": "Максим",
+        "todoList": [
+            {"lable": "Сделать заготовку под ToDo", "done": false},
+            {"lable": "Отрисовка из переменной", "done":false},
+            {"lable": "Реализовать добавление", "done":false},
+            {"lable": "Реализовать удаление","done":false},
+            {"lable": "Рефакторинг", "done":false},
+            {"lable": "Прикрутить бэк енд", "done": false},
+            {"lable": "Profit!", "done": false}
+        ]
+    }
+]
