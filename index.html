@@ -9,23 +9,53 @@
 <body>
     <input type="text" /> <button>insert</button>
     <div class="list"></div>
+    <input type="text"><button>delete</button><br />
+    <input type="number"><button>done</button>
 
     <script>
     var nick = 'EGOmaniack';
     var button = document.getElementsByTagName("button")[0];
     var input = document.getElementsByTagName('input')[0];
+
+    var delButton = document.getElementsByTagName("button")[1];
+    var delInput = document.getElementsByTagName("input")[1];
+
+    var doneButton = document.getElementsByTagName("button")[2];
+    var doneInput = document.getElementsByTagName("input")[2];
+
+    function render(response){
+        document.getElementsByClassName('list')[0].innerHTML = response;
+    }
+    doneButton.onclick = function(){
+        var request = new XMLHttpRequest(); //http://egomaniack.ru
+        request.open('POST', 'http://egomaniack.ru/lessons/ToDo/doneToDo.php', true);
+        request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+        request.send('input=' + doneInput.value + '&nick=' + nick + '&list=false');
+        request.onload = function(){
+            render(request.responseText);
+        }
+    };
+    delButton.onclick = function(){
+        var request = new XMLHttpRequest(); //http://egomaniack.ru
+        request.open('POST', 'http://egomaniack.ru/lessons/ToDo/delToDo.php', true);
+        request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+        request.send('input=' + delInput.value + '&nick=' + nick + '&list=true');
+        request.onload = function(){
+            render(request.responseText);
+        }
+    };
     button.onclick = function(){
         var request = new XMLHttpRequest();
-        request.open('POST', '/lessons/ToDo/insertToDo.php', true);
+        request.open('POST', 'http://egomaniack.ru/lessons/ToDo/insertToDo.php', true);
         request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
         request.send('input=' + input.value + '&nick=' + nick + '&list=true');
         request.onload = function(){
-            document.getElementsByClassName('list')[0].innerHTML = request.responseText;
+            render(request.responseText);
         }
     };
     function getList(callback){
         var request = new XMLHttpRequest();
-        request.open('GET', '/lessons/ToDo/getToDo.php?nick=' + nick + '&list=true', true);
+        request.open('GET', 'http://egomaniack.ru/lessons/ToDo/getToDo.php?nick=' + nick + '&list=true', true);
 
         request.onload = function() {
         if (request.status >= 200 && request.status < 400) {
@@ -45,7 +75,7 @@
 
         request.send();
     }
-    getList(function(response){document.getElementsByClassName('list')[0].innerHTML = response});
+    getList(render);
     </script>
     
 </body>

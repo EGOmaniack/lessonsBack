@@ -1,1 +1,125 @@
-[{"NickName":"eseptus","name":"Алексей","todoList":[{"lable":"Сделать заготовку под ToDo","done":false},{"lable":"Отрисовка из переменной","done":false},{"lable":"Реализовать добавление","done":false},{"lable":"Реализовать удаление","done":false},{"lable":"Рефакторинг","done":false},{"lable":"Прикрутить бэк енд","done":false},{"lable":"Profit!","done":false}]},{"NickName":"RakotDD","name":"Максим","todoList":[{"lable":"Сделать заготовку под ToDo","done":false},{"lable":"Отрисовка из переменной","done":false},{"lable":"Реализовать добавление","done":false},{"lable":"Реализовать удаление","done":false},{"lable":"Рефакторинг","done":false},{"lable":"Прикрутить бэк енд","done":false},{"lable":"Profit!","done":false}]},{"NickName":"EGOmaniack","name":"Максим","todoList":[{"lable":"Сделать заготовку под ToDo","done":false},{"lable":"Отрисовка из переменной","done":false},{"lable":"Реализовать добавление","done":false},{"lable":"Реализовать удаление","done":false},{"lable":"Рефакторинг","done":false},{"lable":"Прикрутить бэк енд","done":false},{"lable":"Profit!","done":false},{"lable":"asdas","done":false},{"lable":"dasdas","done":false}]}]
+[
+    {
+        "NickName": "eseptus",
+        "name": "Алексей",
+        "todoList": [
+            {
+                "id": 0,
+                "label": "Сделать заготовку под ToDo",
+                "done": false
+            },
+            {
+                "id": 1,
+                "label": "Отрисовка из переменной",
+                "done": false
+            },
+            {
+                "id": 2,
+                "label": "Реализовать добавление",
+                "done": false
+            },
+            {
+                "id": 3,
+                "label": "Реализовать удаление",
+                "done": false
+            },
+            {
+                "id": 4,
+                "label": "Рефакторинг",
+                "done": false
+            },
+            {
+                "id": 5,
+                "label": "Прикрутить бэк енд",
+                "done": false
+            },
+            {
+                "id": 6,
+                "label": "Profit!",
+                "done": false
+            }
+        ]
+    },
+    {
+        "NickName": "RakotDD",
+        "name": "Максим",
+        "todoList": [
+            {
+                "id": 7,
+                "label": "Сделать заготовку под ToDo",
+                "done": false
+            },
+            {
+                "id": 8,
+                "label": "Отрисовка из переменной",
+                "done": false
+            },
+            {
+                "id": 9,
+                "label": "Реализовать добавление",
+                "done": false
+            },
+            {
+                "id": 10,
+                "label": "Реализовать удаление",
+                "done": false
+            },
+            {
+                "id": 11,
+                "label": "Рефакторинг",
+                "done": false
+            },
+            {
+                "id": 12,
+                "label": "Прикрутить бэк енд",
+                "done": false
+            },
+            {
+                "id": 13,
+                "label": "Profit!",
+                "done": false
+            }
+        ]
+    },
+    {
+        "NickName": "EGOmaniack",
+        "name": "Максим",
+        "todoList": [
+            {
+                "id": 14,
+                "label": "Сделать заготовку под ToDo",
+                "done": false
+            },
+            {
+                "id": 15,
+                "label": "Отрисовка из переменной",
+                "done": false
+            },
+            {
+                "id": 16,
+                "label": "Реализовать добавление",
+                "done": false
+            },
+            {
+                "id": 17,
+                "label": "Реализовать удаление",
+                "done": true
+            },
+            {
+                "id": 18,
+                "label": "Рефакторинг",
+                "done": true
+            },
+            {
+                "label": "Profit!",
+                "done": false,
+                "id": 21
+            },
+            {
+                "label": "Прикрутить бэк енд",
+                "done": true,
+                "id": 22
+            }
+        ]
+    }
+]

@@ -14,7 +14,7 @@ for($i = 0; $i < count($todoAll); $i++){
     if($todoAll[$i]["NickName"] == $nick){
         if($list == "true"){
             for($j=0; $j<count($todoAll[$i]["todoList"]); $j++){
-                $myTodo[] = $todoAll[$i]["todoList"][$j]["lable"];
+                $myTodo[] = $todoAll[$i]["todoList"][$j]["label"];
             }
         }else{
             $myTodo = $todoAll[$i]["todoList"];
