@@ -8,12 +8,16 @@ $savedItems = json_decode($newarr, true);
 $file_name = './todo.json';
 $json = file_get_contents($file_name);
 $count = intval(file_get_contents('./count'));
-$savedItems["id"] = $count;
 $newItems = [];
 //добавить в массив поля id и done
 if($list == 'true'){
-    for($i=0;$i<count($savedItems)-1;$i++){
+    for($i=0;$i<count($savedItems);$i++){
         $newItems[] = array('id'=>$count, 'label'=>$savedItems[$i], 'done'=>false );
+        $count++;
+    }
+} else {
+    for($i=0;$i<count($savedItems);$i++){
+        $newItems[] = array('id'=>$count, 'label'=>$savedItems[$i]["label"], 'done'=>$savedItems[$i]["done"] );
         $count++;
     }
 }
@@ -21,7 +25,7 @@ if($list == 'true'){
 $todoAll = json_decode($json, true);
 $myTodo;
 for($i = 0; $i < count($todoAll); $i++){
-    if($todoAll[$i]["NickName"] == $nick){
+    if(strtolower($todoAll[$i]["NickName"]) == strtolower($nick)){
         unset($todoAll[$i]["todoList"]);
         $todoAll[$i]["todoList"] = $newItems;
         if($list == "true"){

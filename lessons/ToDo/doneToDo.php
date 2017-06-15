@@ -9,7 +9,7 @@ $json = file_get_contents($file_name);
 $todoAll = json_decode($json, true);
 $myTodo = [];
 for($i = 0; $i < count($todoAll); $i++){
-    if($todoAll[$i]["NickName"] == $nick){
+    if(strtolower($todoAll[$i]["NickName"]) == strtolower($nick)){
 
         for($j=0; $j<count($todoAll[$i]["todoList"]); $j++){
             if($todoAll[$i]["todoList"][$j]["id"] == $input){

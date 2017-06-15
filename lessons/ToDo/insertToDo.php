@@ -12,7 +12,7 @@ $newItem["id"] = $count;
 $todoAll = json_decode($json, true);
 $myTodo;
 for($i = 0; $i < count($todoAll); $i++){
-    if($todoAll[$i]["NickName"] == $nick){
+    if(strtolower($todoAll[$i]["NickName"]) == strtolower($nick)){
         $todoAll[$i]["todoList"][] = $newItem;
         if($list == "true"){
             for($j=0; $j<count($todoAll[$i]["todoList"]); $j++){

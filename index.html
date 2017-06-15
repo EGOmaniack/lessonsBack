@@ -13,7 +13,7 @@
     <input type="number"><button>done</button>
 
     <script>
-    var nick = 'EGOmaniack';
+    var nick = 'egomaniack';
     var button = document.getElementsByTagName("button")[0];
     var input = document.getElementsByTagName('input')[0];
 
@@ -28,7 +28,7 @@
     }
     doneButton.onclick = function(){
         var request = new XMLHttpRequest(); //http://egomaniack.ru
-        request.open('POST', 'http://egomaniack.ru/lessons/ToDo/doneToDo.php', true);
+        request.open('POST', 'http://localhost/lessons/ToDo/doneToDo.php', true);
         request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
         request.send('input=' + doneInput.value + '&nick=' + nick + '&list=false');
         request.onload = function(){
@@ -55,7 +55,7 @@
     };
     function getList(callback){
         var request = new XMLHttpRequest();
-        request.open('GET', 'http://egomaniack.ru/lessons/ToDo/getToDo.php?nick=' + nick + '&list=true', true);
+        request.open('GET', 'http:/localhost/lessons/ToDo/getToDo.php?nick=' + nick + '&list=true', true);
 
         request.onload = function() {
         if (request.status >= 200 && request.status < 400) {
