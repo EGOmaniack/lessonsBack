@@ -1,7 +1,10 @@
 <?php
 $nick = $_POST['nick'];
 $newarr = $_POST['input'];
-$list = $_POST['list'];
+$list = false;
+if(isset($_POST['input'])){
+    $list = $_POST['list'];
+}
 
 $savedItems = json_decode($newarr, true);
 
@@ -46,6 +49,7 @@ file_put_contents(
     './count',
     $count
 );
+
 header("Access-Control-Allow-Origin: *");
 echo(json_encode($myTodo, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 ?>

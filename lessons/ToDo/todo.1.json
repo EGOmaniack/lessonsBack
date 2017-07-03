@@ -37,5 +37,18 @@
             {"id":19,"label": "Прикрутить бэк енд", "done": false},
             {"id":20,"label": "Profit!", "done": false}
         ]
+    },
+    {
+        "NickName": "DronTr",
+        "name": "Андрей",
+        "todoList": [
+            {"id":21,"label": "Сделать заготовку под ToDo", "done": false},
+            {"id":22,"label": "Отрисовка из переменной", "done":false},
+            {"id":23,"label": "Реализовать добавление", "done":false},
+            {"id":24,"label": "Реализовать удаление","done":false},
+            {"id":25,"label": "Рефакторинг", "done":false},
+            {"id":26,"label": "Прикрутить бэк енд", "done": false},
+            {"id":27,"label": "Profit!", "done": false}
+        ]
     }
 ]
